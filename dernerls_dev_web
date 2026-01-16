@@ -41,6 +41,14 @@ choco install -y microsoftwebdriver
 #-- TODO ---
 # Claude Code (Node.js 18+ erforderlich)
 # irm https://claude.ai/install.ps1 | iex
+
+# Github CLI
+# Authentication via secrets?
+
+# WinUI Development
+# winget install Microsoft.DotNet.SDK.8
+
+
   
 Enable-UAC
 Enable-MicrosoftUpdate
