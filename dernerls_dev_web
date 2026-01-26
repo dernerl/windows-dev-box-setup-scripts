@@ -48,6 +48,8 @@ choco install -y microsoftwebdriver
 # WinUI Development
 # winget install Microsoft.DotNet.SDK.8
 
+# PowerShell
+# winget install --id Microsoft.PowerShell --source winget
 
   
 Enable-UAC
