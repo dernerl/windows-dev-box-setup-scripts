@@ -32,26 +32,17 @@ executeScript "WSL.ps1";
 executeScript "Browsers.ps1";
 
 #--- Tools ---
-code --install-extension msjsdiag.debugger-for-chrome
-code --install-extension msjsdiag.debugger-for-edge
-
-#--- Microsoft WebDriver ---
-choco install -y microsoftwebdriver
-
-#-- TODO ---
-# Claude Code (Node.js 18+ erforderlich)
-# irm https://claude.ai/install.ps1 | iex
-
-# Github CLI
-# Authentication via secrets?
-
+RefreshEnv
+choco install -y gh
+choco install -y powershell-core
 # WinUI Development
-# winget install Microsoft.DotNet.SDK.8
+choco install -y dotnet-8.0-sdk
 
-# PowerShell
-# winget install --id Microsoft.PowerShell --source winget
+#--- Claude Code (native installer, no Node.js needed) ---
+irm https://claude.ai/install.ps1 | iex
 
-  
+# GitHub CLI login is interactive, run after setup: gh auth login
+
 Enable-UAC
 Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula
